@@ -1,0 +1,13 @@
+port: 8080
+
+role:
+  conf_file: "basic_model.conf"
+  policy: "basic_policy.csv"
+
+auth:
+  signing_key: "your_signing_key"
+  hash_salt: "your_hash_salt"
+  token_ttl: 86400
+
+postgres:
+  url: "host=localhost port=5432 dbname=fencing sslmode=disable user=postgres password=postgres"

@@ -1,0 +1,11 @@
+p, admin, /*, *
+
+p, anonymous, /, *
+p, anonymous, /sign-in, POST
+p, anonymous, /sign-up, POST
+p, anonymous, /competitions, GET
+
+p, user, /, *
+p, user, /user/*, *
+p, user, /logout, *
+p, user, /api/competitions, *
