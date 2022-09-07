@@ -18,17 +18,17 @@ func main() {
 		log.Fatal(err)
 	}
 
-	usernamePtr := flag.String("username", "test_user6", "username")
+	emailPtr := flag.String("email", "test_user6", "email")
 	passwordPtr := flag.String("pass", "qwerty", "password")
 	rolePtr := flag.String("user", "user", "admin")
 
 	flag.Parse()
 
-	if err := createUser(*usernamePtr, *passwordPtr, *rolePtr); err != nil {
+	if err := createUser(*emailPtr, *passwordPtr, *rolePtr); err != nil {
 		log.Fatal(err)
 	}
 
-	resp, err := authorize(*usernamePtr, *passwordPtr, *rolePtr)
+	resp, err := authorize(*emailPtr, *passwordPtr, *rolePtr)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,11 +38,11 @@ func main() {
 	// ctx := context.WithValue(context.Background(),
 	// 	"Authorization", "Bearer"+resp.Token)
 
-	res, err := http.Get("http://localhost:8080/competitions")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("%v\n", res)
+	// res, err := http.Get("http://localhost:8080/competitions")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Printf("%v\n", res)
 
 	// user, err := parser.ParseToken(token, []byte(viper.GetString("auth.signing_key")))
 	// if err != nil {
@@ -60,14 +60,14 @@ type response struct {
 }
 
 type userRequest struct {
-	Username string `json:"username"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 	Role     string `json:"role"`
 }
 
-func createUser(username, password, role string) error {
+func createUser(email, password, role string) error {
 	reqBody := &userRequest{
-		Username: username,
+		Email:    email,
 		Password: password,
 		Role:     role,
 	}
@@ -76,9 +76,9 @@ func createUser(username, password, role string) error {
 	return request(reqBody, resp, "http://localhost:8080/auth/sign-up")
 }
 
-func authorize(username, password, role string) (*response, error) {
+func authorize(email, password, role string) (*response, error) {
 	reqBody := &userRequest{
-		Username: username,
+		Email:    email,
 		Password: password,
 		Role:     role,
 	}

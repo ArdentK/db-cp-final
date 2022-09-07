@@ -11,7 +11,7 @@ import (
 
 	"github.com/ArdentK/db-cp-final/auth"
 	"github.com/ArdentK/db-cp-final/auth/delivery"
-	"github.com/ArdentK/db-cp-final/auth/repository/localstorage"
+	authsql "github.com/ArdentK/db-cp-final/auth/repository/postgres"
 	"github.com/ArdentK/db-cp-final/auth/usecase"
 
 	"github.com/gin-gonic/gin"
@@ -19,6 +19,8 @@ import (
 
 	_ "github.com/lib/pq"
 
+	athletcomp "github.com/ArdentK/db-cp-final/pkg/athletComp"
+	acDelivery "github.com/ArdentK/db-cp-final/pkg/athletComp/delivery"
 	"github.com/ArdentK/db-cp-final/pkg/competitions"
 	compDelivery "github.com/ArdentK/db-cp-final/pkg/competitions/delivery"
 )
@@ -29,6 +31,8 @@ type App struct {
 	authUseCase auth.UseCase
 
 	compUseCase competitions.CompUseCase
+
+	acUseCase athletcomp.ACUseCase
 }
 
 func initDB() (*sql.DB, error) {
@@ -49,11 +53,11 @@ func NewApp() (*App, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer db.Close()
+	// defer db.Close()
 
-	userRepo := localstorage.NewUserLocalStorage()
+	// userRepo := localstorage.NewUserLocalStorage()
 
-	// userRepo := postgres.NewUserRepository(db)
+	userRepo := authsql.NewUserRepository(db)
 	authUseCase := usecase.NewAuthorizer(
 		userRepo,
 		viper.GetString("auth.hash_salt"),
@@ -79,11 +83,12 @@ func (a *App) Run(port string) error {
 	api := router.Group("/auth")
 	delivery.RegisterHTTPEndpoints(api, a.authUseCase)
 
-	// authMiddleware := delivery.NewAuthMiddleware(a.authUseCase)
-	// newApi := router.Group("/api", authMiddleware)
+	authMiddleware := delivery.NewAuthMiddleware(a.authUseCase)
+	newApi := router.Group("/api", authMiddleware)
+
+	acDelivery.RegisterHTTPEndpoints(newApi, a.acUseCase)
 
 	compDelivery.RegisterHTTPEndpoints(&router.RouterGroup, a.compUseCase)
-	// compDelivery.RegisterHTTPEndpoints(&router.RouterGroup, a.compUseCase)
 
 	// HTTP Server
 	a.httpServer = &http.Server{
