@@ -11,6 +11,8 @@ import (
 	"net/http"
 
 	"github.com/ArdentK/db-cp-final/config"
+	"github.com/ArdentK/db-cp-final/parser"
+	"github.com/spf13/viper"
 )
 
 func main() {
@@ -18,7 +20,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	emailPtr := flag.String("email", "test_user6", "email")
+	emailPtr := flag.String("email", "test_user", "email")
 	passwordPtr := flag.String("pass", "qwerty", "password")
 	rolePtr := flag.String("user", "user", "admin")
 
@@ -44,12 +46,12 @@ func main() {
 	// }
 	// fmt.Printf("%v\n", res)
 
-	// user, err := parser.ParseToken(token, []byte(viper.GetString("auth.signing_key")))
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+	user, err := parser.ParseToken(resp.Token, []byte(viper.GetString("auth.signing_key")))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	// fmt.Printf("Successfully created and authorized user: %+v", user)
+	fmt.Printf("Successfully created and authorized user: %+v", user)
 
 }
 

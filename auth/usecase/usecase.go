@@ -17,41 +17,48 @@ type AuthClaims struct {
 	User *models.User `json:"user"`
 }
 
-type Authorizer struct {
-	repo           auth.UserRepository
+type AuthUseCase struct {
+	userRepo       auth.UserRepository
 	hashSalt       string
 	signingKey     []byte
 	expireDuration time.Duration
 }
 
-func NewAuthorizer(repo auth.UserRepository, hashSalt string, signingKey []byte, expireDuration time.Duration) *Authorizer {
-	return &Authorizer{
-		repo:           repo,
+func NewAuthUseCase(
+	userRepo auth.UserRepository,
+	hashSalt string,
+	signingKey []byte,
+	tokenTTLSeconds time.Duration) *AuthUseCase {
+	return &AuthUseCase{
+		userRepo:       userRepo,
 		hashSalt:       hashSalt,
 		signingKey:     signingKey,
-		expireDuration: expireDuration,
+		expireDuration: time.Second * tokenTTLSeconds,
 	}
 }
 
-func (a *Authorizer) SignUp(ctx context.Context, user *models.User) error {
-	// Create password hash
+func (a *AuthUseCase) SignUp(ctx context.Context, email, password string) error {
 	pwd := sha1.New()
-	pwd.Write([]byte(user.Password))
+	pwd.Write([]byte(password))
 	pwd.Write([]byte(a.hashSalt))
-	user.Password = fmt.Sprintf("%x", pwd.Sum(nil))
 
-	return a.repo.CreateUser(ctx, user)
+	user := &models.User{
+		Email:    email,
+		Password: fmt.Sprintf("%x", pwd.Sum(nil)),
+	}
+
+	return a.userRepo.CreateUser(ctx, user)
 }
 
-func (a *Authorizer) SignIn(ctx context.Context, user *models.User) (string, error) {
+func (a *AuthUseCase) SignIn(ctx context.Context, email, password string) (string, error) {
 	pwd := sha1.New()
-	pwd.Write([]byte(user.Password))
+	pwd.Write([]byte(password))
 	pwd.Write([]byte(a.hashSalt))
-	user.Password = fmt.Sprintf("%x", pwd.Sum(nil))
+	password = fmt.Sprintf("%x", pwd.Sum(nil))
 
-	user, err := a.repo.GetUser(ctx, user.Email, user.Password)
+	user, err := a.userRepo.GetUser(ctx, email, password)
 	if err != nil {
-		return "", err
+		return "", auth.ErrUserDoesNotExist
 	}
 
 	claims := AuthClaims{
@@ -66,7 +73,7 @@ func (a *Authorizer) SignIn(ctx context.Context, user *models.User) (string, err
 	return token.SignedString(a.signingKey)
 }
 
-func (a *Authorizer) ParseToken(ctx context.Context, accessToken string) (*models.User, error) {
+func (a *AuthUseCase) ParseToken(ctx context.Context, accessToken string) (*models.User, error) {
 	token, err := jwt.ParseWithClaims(accessToken, &AuthClaims{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])

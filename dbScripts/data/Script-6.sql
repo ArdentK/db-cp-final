@@ -33,7 +33,7 @@ create table account (
 
 create table AthletComp (
 	id bigserial not null primary key,
-	id_athlet int not null references account(id),
+	id_athlet int not null references users(id),
 	id_competition int not null references competitions(id),
 	constraint uniquePair unique (id_athlet, id_competition)	
 ); 
@@ -71,7 +71,7 @@ insert into users(email, "password", "role")
 values ('ololo@example.com', 'koko', 'user');
 
 delete from users 
-where id = 2;
+where id = 4;
 
 select * from users u;
 
@@ -89,7 +89,7 @@ login
 password 'myapp';
 
 grant all
-on users
+on athletcomp
 to myapp;
 
 revoke all on users from myapp;

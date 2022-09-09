@@ -7,8 +7,8 @@ import (
 )
 
 func RegisterHTTPEndpoints(router *gin.RouterGroup, usecase auth.UseCase) {
-	h := newHandler(usecase)
+	h := NewHandler(usecase)
 
-	router.POST("/sign-up", h.signUp)
-	router.POST("/sign-in", h.signIn)
+	router.POST("/sign-up", h.SignUp)
+	router.POST("/sign-in", h.SignIn)
 }

@@ -7,6 +7,6 @@ import (
 )
 
 type ACRepo interface {
-	AddRow(ctx context.Context, r *models.AthletComp) (int, error)
+	AddRow(ctx context.Context, r *models.AthletComp) error
 	DelRow(ctx context.Context, r *models.AthletComp) error
 }

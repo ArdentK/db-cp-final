@@ -1,93 +1,68 @@
 package delivery
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/ArdentK/db-cp-final/auth"
-	"github.com/ArdentK/db-cp-final/models"
 
 	"github.com/gin-gonic/gin"
 )
 
-const (
-	STATUS_OK    = "ok"
-	STATUS_ERROR = "error"
-)
-
-type response struct {
-	Status string `json:"status"`
-	Msg    string `json:"message,omitempty"`
-}
-
-func newResponse(status, msg string) *response {
-	return &response{
-		Status: status,
-		Msg:    msg,
-	}
-}
-
-type handler struct {
+type Handler struct {
 	useCase auth.UseCase
 }
 
-func newHandler(useCase auth.UseCase) *handler {
-	return &handler{
+func NewHandler(useCase auth.UseCase) *Handler {
+	return &Handler{
 		useCase: useCase,
 	}
 }
 
-func (h *handler) signUp(c *gin.Context) {
-	inp := new(models.User)
-	if err := c.BindJSON(inp); err != nil {
-		c.AbortWithStatusJSON(http.StatusBadRequest, newResponse(STATUS_ERROR, err.Error()))
-		return
-	}
-
-	if err := h.useCase.SignUp(c.Request.Context(), inp); err != nil {
-		c.AbortWithStatusJSON(http.StatusInternalServerError, newResponse(STATUS_ERROR, err.Error()))
-		return
-	}
-
-	c.JSON(http.StatusOK, newResponse(STATUS_OK, "user created successfully"))
+type signInput struct {
+	Email    string `json:"email"`
+	Password string `json:"password"`
 }
 
-type signInResponse struct {
-	*response
-	Token string `json:"token,omitempty"`
-}
+func (h *Handler) SignUp(c *gin.Context) {
+	inp := new(signInput)
 
-func newSignInResponse(status, msg, token string) *signInResponse {
-	return &signInResponse{
-		&response{
-			Status: status,
-			Msg:    msg,
-		},
-		token,
-	}
-}
-
-func (h *handler) signIn(c *gin.Context) {
-	inp := new(models.User)
 	if err := c.BindJSON(inp); err != nil {
 		c.AbortWithStatus(http.StatusBadRequest)
 		return
 	}
 
-	token, err := h.useCase.SignIn(c.Request.Context(), inp)
-	if err != nil {
-		if err == auth.ErrInvalidAccessToken {
-			c.AbortWithStatusJSON(http.StatusBadRequest, newSignInResponse(STATUS_ERROR, err.Error(), ""))
-			return
-		}
-
-		if err == auth.ErrUserDoesNotExist {
-			c.AbortWithStatusJSON(http.StatusBadRequest, newSignInResponse(STATUS_ERROR, err.Error(), ""))
-			return
-		}
-
-		c.AbortWithStatusJSON(http.StatusInternalServerError, newSignInResponse(STATUS_ERROR, err.Error(), ""))
+	if err := h.useCase.SignUp(c.Request.Context(), inp.Email, inp.Password); err != nil {
+		c.AbortWithStatus(http.StatusInternalServerError)
+		fmt.Println(err.Error())
 		return
 	}
 
-	c.JSON(http.StatusOK, newSignInResponse(STATUS_OK, "", token))
+	c.Status(http.StatusOK)
+}
+
+type signInResponse struct {
+	Token string `json:"token"`
+}
+
+func (h *Handler) SignIn(c *gin.Context) {
+	inp := new(signInput)
+
+	if err := c.BindJSON(inp); err != nil {
+		c.AbortWithStatus(http.StatusBadRequest)
+		return
+	}
+
+	token, err := h.useCase.SignIn(c.Request.Context(), inp.Email, inp.Password)
+	if err != nil {
+		if err == auth.ErrUserDoesNotExist {
+			c.AbortWithStatus(http.StatusUnauthorized)
+			return
+		}
+
+		c.AbortWithStatus(http.StatusInternalServerError)
+		return
+	}
+
+	c.JSON(http.StatusOK, signInResponse{Token: token})
 }

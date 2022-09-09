@@ -21,8 +21,13 @@ import (
 
 	athletcomp "github.com/ArdentK/db-cp-final/pkg/athletComp"
 	acDelivery "github.com/ArdentK/db-cp-final/pkg/athletComp/delivery"
+	acsql "github.com/ArdentK/db-cp-final/pkg/athletComp/repository/postgres"
+	acusecase "github.com/ArdentK/db-cp-final/pkg/athletComp/usecase"
+
 	"github.com/ArdentK/db-cp-final/pkg/competitions"
 	compDelivery "github.com/ArdentK/db-cp-final/pkg/competitions/delivery"
+	compsql "github.com/ArdentK/db-cp-final/pkg/competitions/repository/postgres"
+	compusecase "github.com/ArdentK/db-cp-final/pkg/competitions/usecase"
 )
 
 type App struct {
@@ -48,29 +53,61 @@ func initDB() (*sql.DB, error) {
 	return db, nil
 }
 
-func NewApp() (*App, error) {
+// func NewApp() (*App, error) {
+// 	db, err := initDB()
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	// defer db.Close()
+
+// 	acRepo := acsql.NewAcRepository(db)
+// 	acUseCase := acusecase.NewACUseCase(acRepo)
+
+// 	compRepo := compsql.NewCompRepository(db)
+// 	compUseCase := compusecase.NewCompUseCase(compRepo)
+
+// 	userRepo := authsql.NewUserRepository(db)
+// 	authUseCase := usecase.NewAuthUseCase(
+// 		userRepo,
+// 		viper.GetString("auth.hash_salt"),
+// 		[]byte(viper.GetString("auth.signing_key")),
+// 		viper.GetDuration("auth.token_ttl")*time.Second,
+// 	)
+
+// 	return &App{
+// 		authUseCase: authUseCase,
+// 		compUseCase: compUseCase,
+// 		acUseCase:   acUseCase,
+// 	}, nil
+// }
+
+func Run(port string) error {
 	db, err := initDB()
 	if err != nil {
-		return nil, err
+		return err
 	}
-	// defer db.Close()
+	defer db.Close()
 
-	// userRepo := localstorage.NewUserLocalStorage()
+	acRepo := acsql.NewAcRepository(db)
+	acUseCase := acusecase.NewACUseCase(acRepo)
+
+	compRepo := compsql.NewCompRepository(db)
+	compUseCase := compusecase.NewCompUseCase(compRepo)
 
 	userRepo := authsql.NewUserRepository(db)
-	authUseCase := usecase.NewAuthorizer(
+	authUseCase := usecase.NewAuthUseCase(
 		userRepo,
 		viper.GetString("auth.hash_salt"),
 		[]byte(viper.GetString("auth.signing_key")),
 		viper.GetDuration("auth.token_ttl")*time.Second,
 	)
 
-	return &App{
+	a := &App{
 		authUseCase: authUseCase,
-	}, nil
-}
+		compUseCase: compUseCase,
+		acUseCase:   acUseCase,
+	}
 
-func (a *App) Run(port string) error {
 	// Init gin handler
 	router := gin.Default()
 
