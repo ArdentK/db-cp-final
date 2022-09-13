@@ -9,20 +9,20 @@ import (
 )
 
 type UserLocalStorage struct {
-	users map[int]*models.User
+	users map[string]*models.User
 	mutex *sync.Mutex
 }
 
 func NewUserLocalStorage() *UserLocalStorage {
 	return &UserLocalStorage{
-		users: make(map[int]*models.User),
+		users: make(map[string]*models.User),
 		mutex: new(sync.Mutex),
 	}
 }
 
 func (s *UserLocalStorage) CreateUser(ctx context.Context, user *models.User) error {
 	s.mutex.Lock()
-	s.users[user.ID] = user
+	s.users[user.Email] = user
 	s.mutex.Unlock()
 
 	return nil

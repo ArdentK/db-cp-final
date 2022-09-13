@@ -18,23 +18,22 @@ func NewUserRepository(db *sql.DB) *UserRepository {
 }
 
 func (r *UserRepository) CreateUser(ctx context.Context, user *models.User) error {
-	user.Role = "user"
-	return r.db.QueryRow(
-		"INSERT INTO users (email, password, role) VALUES ($1, $2, $3) RETURNING id",
+	_, err := r.db.Exec(
+		"INSERT INTO users (email, password, role) VALUES ($1, $2, $3)",
 		user.Email,
 		user.Password,
 		user.Role,
-	).Scan(&user.ID)
+	)
+	return err
 }
 
 func (r *UserRepository) GetUser(ctx context.Context, email, password string) (*models.User, error) {
 	u := &models.User{}
 	err := r.db.QueryRow(
-		"SELECT id, email, password, role FROM users WHERE email = $1 AND password = $2",
+		"SELECT email, password, role FROM users WHERE email = $1 AND password = $2",
 		email,
 		password,
 	).Scan(
-		&u.ID,
 		&u.Email,
 		&u.Password,
 		&u.Role,

@@ -22,6 +22,7 @@ func NewHandler(useCase auth.UseCase) *Handler {
 type signInput struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
+	Role     string `json:"role"`
 }
 
 func (h *Handler) SignUp(c *gin.Context) {
@@ -32,7 +33,7 @@ func (h *Handler) SignUp(c *gin.Context) {
 		return
 	}
 
-	if err := h.useCase.SignUp(c.Request.Context(), inp.Email, inp.Password); err != nil {
+	if err := h.useCase.SignUp(c.Request.Context(), inp.Email, inp.Password, inp.Role); err != nil {
 		c.AbortWithStatus(http.StatusInternalServerError)
 		fmt.Println(err.Error())
 		return
@@ -53,7 +54,7 @@ func (h *Handler) SignIn(c *gin.Context) {
 		return
 	}
 
-	token, err := h.useCase.SignIn(c.Request.Context(), inp.Email, inp.Password)
+	token, err := h.useCase.SignIn(c.Request.Context(), inp.Email, inp.Password, inp.Role)
 	if err != nil {
 		if err == auth.ErrUserDoesNotExist {
 			c.AbortWithStatus(http.StatusUnauthorized)

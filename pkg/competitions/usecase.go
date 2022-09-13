@@ -7,6 +7,8 @@ import (
 )
 
 type CompUseCase interface {
+	Analytic(ctx context.Context) ([]*models.Competition, error)
+	FindByID(ctx context.Context, id int) (*models.Competition, error)
 	List(ctx context.Context) ([]*models.Competition, error)
 	SortASCByData(ctx context.Context) ([]*models.Competition, error)
 	SortDESCByData(ctx context.Context) ([]*models.Competition, error)

@@ -19,15 +19,15 @@ func NewACUseCase(r athletcomp.ACRepo) *AthletCompUseCase {
 
 func (ac AthletCompUseCase) Create(ctx context.Context, user *models.User, idComp int) error {
 	newAC := &models.AthletComp{
-		IDAthlet: user.ID,
-		IDComp:   idComp,
+		Email:  user.Email,
+		IDComp: idComp,
 	}
 	return ac.repo.AddRow(ctx, newAC)
 }
 func (ac AthletCompUseCase) Delete(ctx context.Context, user *models.User, idComp int) error {
 	newAC := &models.AthletComp{
-		IDAthlet: user.ID,
-		IDComp:   idComp,
+		Email:  user.Email,
+		IDComp: idComp,
 	}
 	return ac.repo.DelRow(ctx, newAC)
 }

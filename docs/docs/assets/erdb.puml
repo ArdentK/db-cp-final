@@ -1,0 +1,58 @@
+@startuml
+!define primary_key(x) <b><color:#b8861b><&key></color> x</b>
+!define foreign_key(x) <color:#aaaaaa><&key></color> x
+!define column(x) <color:#efefef><&media-record></color> x
+!define table(x) entity x << (T, white) >>
+table( users ) {
+  primary_key( email ): varchar
+  column( password ): varchar 
+  column( role ): varchar
+}
+
+table( account ) {
+    primary_key( id ) : int
+    column( name ) : varchar
+    column( birthday ) : data
+    column( sex ) : varchar(10)
+    foreign_key( email ) : varchar <<FK>>
+}
+
+table( competitions ) {
+    primary_key(id) : int
+    column(name) : varchar
+    column(date) : date 
+    column(ageCategory) : varchar
+    column(weaponType) : varchar
+    column(sex) : varchar
+    column(isTeam): boolean
+    column(status) : varchar
+    column(numOfAthlets) : int
+}
+
+table(AC) {
+    primary_key(id) : int
+    foreign_key(idAthlet) : int <<FK>>
+    foreign_key(idCompetition) : int <<FK>>
+}
+
+table(athlets) {
+    primary_key(id) : int
+    column(hand) : varchar
+    column(weaponType) : varchar
+    column(rank) : varchar
+    column(insurance) : boolean
+    column(license) : boolean
+}
+
+table(battles) {
+    primary_key(id) : int
+    foreign_key(idWinner) : int <<FK>>
+    foreign_key(idFighter) : int <<FK>>
+    foreign_key(idCompetition) : int <<FK>>
+    column(scoreWinner) : int
+    column(scoreFigter) : int
+}
+
+account::email --> users::email
+
+@enduml

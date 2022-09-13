@@ -1,7 +1,8 @@
 package models
 
 type AthletComp struct {
-	ID       int `json:"id"`
-	IDAthlet int `json:"id_athlet"`
-	IDComp   int `json:"id_competition"`
+	ID     int    `json:"id"`
+	Email  string `json:"email"`
+	IDComp int    `json:"id_competition"`
+	Status bool
 }

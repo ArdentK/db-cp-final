@@ -43,23 +43,23 @@ func newHandler(useCase athletcomp.ACUseCase) *handler {
 
 //TODO
 func (h *handler) NewRow(c *gin.Context) {
-	// req := new(request)
+	req := new(request)
 
-	// err := c.BindJSON(req)
-	// if err != nil {
-	// 	c.AbortWithStatusJSON(http.StatusBadRequest, newResponse(STATUS_ERROR, err.Error()))
-	// 	return
-	// }
+	err := c.BindJSON(req)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, newResponse(STATUS_ERROR, err.Error()))
+		return
+	}
 
-	// user := c.MustGet(auth.CtxUserKey).(*models.User)
+	user := c.MustGet(auth.CtxUserKey).(*models.User)
 
-	// err = h.useCase.Create(c.Request.Context(), user, req.IDComp)
-	// if err != nil {
-	// 	c.AbortWithStatusJSON(http.StatusInternalServerError, newResponse(STATUS_ERROR, err.Error()))
-	// 	return
-	// }
+	err = h.useCase.Create(c.Request.Context(), user, req.IDComp)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, newResponse(STATUS_ERROR, err.Error()))
+		return
+	}
 
-	c.JSON(http.StatusOK, "ADD ROW")
+	c.JSON(http.StatusOK, newResponse(STATUS_OK, "ПОЗДРАВЛЯЕМ!! ЗАЯВКА НА УЧАСТИЕ УСПЕШНО ПОДАНА!"))
 }
 
 func (h *handler) DelRow(c *gin.Context) {
@@ -79,7 +79,7 @@ func (h *handler) DelRow(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, "DEL ROW")
+	c.JSON(http.StatusOK, newResponse(STATUS_OK, "ЗАЯВКА УСПЕШНО ОТОЗВАНА"))
 }
 
 func (h *handler) Test(c *gin.Context) {

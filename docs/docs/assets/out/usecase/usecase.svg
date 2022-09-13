@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="656px" preserveAspectRatio="none" style="width:487px;height:656px;background:#FFFFFF;" version="1.1" viewBox="0 0 487 656" width="487px" zoomAndPan="magnify"><defs/><g><!--MD5=[13663db996397864a81eeec43ee880e8]
+entity Гость--><g id="elem_Гость"><ellipse cx="64.5" cy="26" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M64.5,34 L64.5,61 M51.5,42 L77.5,42 M64.5,61 L51.5,76 M64.5,61 L77.5,76 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="43.5" y="90.4951">Гость</text></g><g id="elem_Авторизация"><ellipse cx="332.1781" cy="22.6356" fill="#F1F1F1" rx="71.1781" ry="16.6356" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="281.1781" y="26.3832">Авторизация</text></g><g id="elem_Просмотр общей информации \n о соревнованиях"><ellipse cx="332.0071" cy="265.7014" fill="#F1F1F1" rx="149.0071" ry="32.2014" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="226" x="214.0071" y="261.3005">Просмотр общей информации</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="269.5071" y="277.5974">о соревнованиях</text></g><!--MD5=[9b685d01420225b3f167fc02345d238c]
+entity Спортсмен--><g id="elem_Спортсмен"><ellipse cx="64.5" cy="203" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M64.5,211 L64.5,238 M51.5,219 L77.5,219 M64.5,238 L51.5,253 M64.5,238 L77.5,253 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="23.5" y="267.4951">Спортсмен</text></g><g id="elem_Просмотр профиля"><ellipse cx="332.0567" cy="94.5113" fill="#F1F1F1" rx="90.5567" ry="20.5113" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="260.5567" y="97.358">Просмотр профиля</text></g><g id="elem_Подача заявки на турнир"><ellipse cx="332.1701" cy="174.634" fill="#F1F1F1" rx="108.6701" ry="24.134" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="240.6701" y="177.4807">Подача заявки на турнир</text></g><g id="elem_Отмена заявки на турнир"><ellipse cx="332.0557" cy="357.4111" fill="#F1F1F1" rx="110.0557" ry="24.4111" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="239.0557" y="360.2578">Отмена заявки на турнир</text></g><!--MD5=[cec1c46a5b41b275eee21f77f21aed13]
+entity Администратор--><g id="elem_Администратор"><ellipse cx="64.5" cy="466" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M64.5,474 L64.5,501 M51.5,482 L77.5,482 M64.5,501 L51.5,516 M64.5,501 L77.5,516 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="6" y="530.4951">Администратор</text></g><g id="elem_Редактирование информации \n о соревнованиях"><ellipse cx="331.8955" cy="449.3791" fill="#F1F1F1" rx="147.3955" ry="31.8791" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="222" x="215.8955" y="444.9782">Редактирование информации</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="269.3955" y="461.2751">о соревнованиях</text></g><g id="elem_Добавление соревнования"><ellipse cx="332.1274" cy="542.5255" fill="#F1F1F1" rx="115.6274" ry="25.5255" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="233.1274" y="545.3722">Добавление соревнования</text></g><g id="elem_Удаление соревнования"><ellipse cx="331.8679" cy="626.6736" fill="#F1F1F1" rx="106.3679" ry="23.6736" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="242.8679" y="629.5203">Удаление соревнования</text></g><!--MD5=[58ff5970b5519266c6ed6cf94b651216]
+link Гость to Авторизация--><g id="link_Гость_Авторизация"><path d="M85.89,52.97 C123.43,48.3 205.01,38.16 263.75,30.86 " fill="none" id="Гость-to-Авторизация" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="269.01,30.21,259.5864,27.3472,264.048,30.8249,260.5702,35.2864,269.01,30.21" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9a0db20b1e067ab016422677f2fd26b2]
+link Гость to Просмотр общей информации \n о соревнованиях--><g id="link_Гость_Просмотр общей информации \n о соревнованиях"><path d="M84.65,93.76 C104.59,129.94 139.05,183.35 183,215.5 C196.39,225.3 211.83,233.26 227.58,239.72 " fill="none" id="Гость-to-Просмотр общей информации \n о соревнованиях" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="232.47,241.68,225.5993,234.6236,227.8276,239.823,222.6281,242.0514,232.47,241.68" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4132717efc52da9199ef15e78a145ab4]
+link Спортсмен to Просмотр профиля--><g id="link_Спортсмен_Просмотр профиля"><path d="M101.42,194.33 C123.18,173.28 152.56,148.28 183,132.5 C204.55,121.33 229.6,113.29 252.89,107.57 " fill="none" id="Спортсмен-to-Просмотр профиля" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="257.84,106.39,248.158,104.5846,252.9761,107.5487,250.012,112.3668,257.84,106.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[facdb686b50584e5f583ca140cd61b87]
+link Спортсмен to Просмотр общей информации \n о соревнованиях--><g id="link_Спортсмен_Просмотр общей информации \n о соревнованиях"><path d="M105.54,237.48 C130.46,240.57 164.09,244.75 197.76,248.94 " fill="none" id="Спортсмен-to-Просмотр общей информации \n о соревнованиях" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="202.73,249.56,194.2885,244.4865,197.7677,248.9468,193.3074,252.4261,202.73,249.56" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[88fd379e8524fd49e98d6e8b30342d12]
+link Спортсмен to Подача заявки на турнир--><g id="link_Спортсмен_Подача заявки на турнир"><path d="M105.54,223.75 C143.41,215.48 201.41,202.81 249.09,192.39 " fill="none" id="Спортсмен-to-Подача заявки на турнир" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="254.26,191.26,244.6121,189.2807,249.3761,192.331,246.3257,197.095,254.26,191.26" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[25664798f8c7da8490d4f02889049a1a]
+link Спортсмен to Отмена заявки на турнир--><g id="link_Спортсмен_Отмена заявки на турнир"><path d="M105.61,265.42 C127.42,282.01 155.51,301.35 183,314.5 C203.53,324.32 226.76,332.36 248.63,338.72 " fill="none" id="Спортсмен-to-Отмена заявки на турнир" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="253.57,340.14,246.0152,333.8214,248.7624,338.7664,243.8174,341.5136,253.57,340.14" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4e5dd3373ef9df19bd5943438e3586b6]
+link Администратор to Редактирование информации \n о соревнованиях--><g id="link_Администратор_Редактирование информации \n о соревнованиях"><path d="M123.11,485.52 C148.92,481.05 180.37,475.6 210.92,470.3 " fill="none" id="Администратор-to-Редактирование информации \n о соревнованиях" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="216.22,469.39,206.6677,466.9912,211.2939,470.2467,208.0385,474.8729,216.22,469.39" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c777301802b878c0c368c65a39f4d792]
+link Администратор to Добавление соревнования--><g id="link_Администратор_Добавление соревнования"><path d="M123.11,505.7 C156.17,511.55 198.5,519.04 236.32,525.74 " fill="none" id="Администратор-to-Добавление соревнования" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="241.39,526.64,233.2239,521.1341,236.4664,525.7694,231.831,529.0119,241.39,526.64" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3c1e27895deb2c0aa92f7b8a5170ccf3]
+link Администратор to Удаление соревнования--><g id="link_Администратор_Удаление соревнования"><path d="M106.92,533.53 C128.31,551.47 155.63,571.87 183,585.5 C203.08,595.5 225.95,603.35 247.6,609.39 " fill="none" id="Администратор-to-Удаление соревнования" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="252.49,610.73,244.8565,604.5067,247.6655,609.4168,242.7554,612.2259,252.49,610.73" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a89b179df29a1518be1e54a4d051ad3b]
+link Администратор to Просмотр общей информации \n о соревнованиях--><g id="link_Администратор_Просмотр общей информации \n о соревнованиях"><path d="M81.2,457.36 C99.79,416.7 134.47,353.1 183,315.5 C195.82,305.57 210.73,297.54 226.06,291.08 " fill="none" id="Администратор-to-Просмотр общей информации \n о соревнованиях" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="230.82,289.13,220.9749,288.858,226.1966,291.0337,224.0209,296.2555,230.82,289.13" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fec9b8254d1cf562b4aa8c4d5c67160b]
+@startuml usecase
+
+left to right direction
+
+:Гость: - -> (Авторизация)
+:Гость: - -> (Просмотр общей информации \n о соревнованиях)
+
+:Спортсмен: - -> (Просмотр профиля)
+:Спортсмен: - -> (Просмотр общей информации \n о соревнованиях)
+:Спортсмен: - -> (Подача заявки на турнир)
+:Спортсмен: - -> (Отмена заявки на турнир)
+
+' (Просмотр календаря \n соревнований) - -> (Фильтрация данных)
+
+:Администратор: - -> (Редактирование информации \n о соревнованиях)
+:Администратор: - -> (Добавление соревнования)
+:Администратор: - -> (Удаление соревнования)
+:Администратор: - -> (Просмотр общей информации \n о соревнованиях)
+
+@enduml
+
+@startuml usecase
+
+left to right direction
+
+:Гость: - -> (Авторизация)
+:Гость: - -> (Просмотр общей информации \n о соревнованиях)
+
+:Спортсмен: - -> (Просмотр профиля)
+:Спортсмен: - -> (Просмотр общей информации \n о соревнованиях)
+:Спортсмен: - -> (Подача заявки на турнир)
+:Спортсмен: - -> (Отмена заявки на турнир)
+
+
+:Администратор: - -> (Редактирование информации \n о соревнованиях)
+:Администратор: - -> (Добавление соревнования)
+:Администратор: - -> (Удаление соревнования)
+:Администратор: - -> (Просмотр общей информации \n о соревнованиях)
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 20:01:30 MSK 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ru
+Country: RU
+--></g></svg>

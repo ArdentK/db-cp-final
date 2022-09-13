@@ -1,0 +1,137 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{FIE}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://www.rusfencing.ru/} -- (дата обращения: 14.05.2022)}
+      \field{title}{Федерация фехтования России}
+    \endentry
+    \entry{EnGarde}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{http://club.fencing.ru/} -- (дата обращения: 10.05.2022)}
+      \field{title}{En Garde}
+    \endentry
+    \entry{models}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{http://bseu.by/it/tohod/lekcii2_3.htm} -- (дата обращения: 23.05.2022)}
+      \field{title}{Модели данных}
+    \endentry
+    \entry{rel}{misc}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{http://bseu.by/it/tohod/lekcii2_2.htm} -- (дата обращения: 23.05.2022)}
+      \field{title}{Реляционна модель данных}
+    \endentry
+    \entry{post}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{http://bseu.by/it/tohod/lekcii2_4.htm} -- (дата обращения: 23.08.2022)}
+      \field{title}{Постреляционные модели данных}
+    \endentry
+    \entry{key-value}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://aws.amazon.com/ru/nosql/key-value/} -- (дата обращения: 23.05.2022)}
+      \field{title}{Определение базы данных на основе пар «ключ‑значение»}
+    \endentry
+    \entry{postgres}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://postgrespro.ru/docs/postgresql/9.6/intro-whatis} -- (дата обращения: 30.08.2022)}
+      \field{title}{PostgreSQL Documentation}
+    \endentry
+    \entry{postgresdocs}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://www.postgresql.org/} -- (дата обращения: 23.08.2022)}
+      \field{title}{PostgreSQL}
+    \endentry
+    \entry{GO}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://go.dev/} -- (дата обращения: 23.08.2022)}
+      \field{title}{Golang}
+    \endentry
+    \entry{GIN}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://gin-gonic.com/docs/} -- (дата обращения: 23.08.2022)}
+      \field{title}{Gin}
+    \endentry
+    \entry{testing}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://pkg.go.dev/testing} -- (дата обращения: 23.08.2022)}
+      \field{title}{testing}
+    \endentry
+    \entry{PL}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://www.postgresql.org/docs/9.6/plpgsql.html} -- (дата обращения: 25.08.2022)}
+      \field{title}{PL/pgSQL}
+    \endentry
+    \entry{JWT}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://jwt.io/} -- (дата обращения: 23.08.2022)}
+      \field{title}{JWT}
+    \endentry
+    \entry{Postman}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://postman.com/} -- (дата обращения: 27.08.2022)}
+      \field{title}{Postman}
+    \endentry
+    \entry{python}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://www.python.org/} -- (дата обращения: 10.09.2022)}
+      \field{title}{Python}
+    \endentry
+    \entry{mimesis}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{-- Режим доступа: \url{https://mimesis.name/en/master/} -- (дата обращения: 10.09.2022)}
+      \field{title}{Python Mimesis Documentation}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

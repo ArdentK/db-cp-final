@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="423px" preserveAspectRatio="none" style="width:545px;height:423px;background:#FFFFFF;" version="1.1" viewBox="0 0 545 423" width="545px" zoomAndPan="magnify"><defs/><g><!--MD5=[fefff7b0103315ca53c7981c3e61735d]
+class Администратор--><g id="elem_Администратор"><rect codeLine="4" fill="#F1F1F1" height="48" id="Администратор" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="149" x="17" y="7"/><ellipse cx="32" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M36.1094,29 L28.3906,29 L28.3906,16.6094 L36.1094,16.6094 L36.1094,18.7656 L30.8438,18.7656 L30.8438,21.4375 L35.6094,21.4375 L35.6094,23.5938 L30.8438,23.5938 L30.8438,26.8438 L36.1094,26.8438 L36.1094,29 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="46" y="27.8467">Администратор</text><line style="stroke:#181818;stroke-width:0.5;" x1="18" x2="165" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="18" x2="165" y1="47" y2="47"/></g><!--MD5=[2a3f318aeecd2ce97203958b3da0920a]
+class Спортсмен--><g id="elem_Спортсмен"><rect codeLine="5" fill="#F1F1F1" height="145.7813" id="Спортсмен" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="17.5" y="90"/><ellipse cx="47.8" cy="106" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M51.9094,112 L44.1906,112 L44.1906,99.6094 L51.9094,99.6094 L51.9094,101.7656 L46.6438,101.7656 L46.6438,104.4375 L51.4094,104.4375 L51.4094,106.5938 L46.6438,106.5938 L46.6438,109.8438 L51.9094,109.8438 L51.9094,112 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="65.2" y="110.8467">Спортсмен</text><line style="stroke:#181818;stroke-width:0.5;" x1="18.5" x2="164.5" y1="122" y2="122"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="23.5" y="138.9951">ID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="23.5" y="155.292">Вооруженная рука</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="23.5" y="171.5889">Страховка</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="23.5" y="187.8857">Лицензия</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="23.5" y="204.1826">Оружие</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="23.5" y="220.4795">Разряд</text><line style="stroke:#181818;stroke-width:0.5;" x1="18.5" x2="164.5" y1="227.7813" y2="227.7813"/></g><!--MD5=[7727584e4826944d4ad925785137a196]
+class Пользователь--><g id="elem_Пользователь"><rect codeLine="14" fill="#F1F1F1" height="129.4844" id="Пользователь" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="388" y="98.5"/><ellipse cx="403" cy="114.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M407.1094,120.5 L399.3906,120.5 L399.3906,108.1094 L407.1094,108.1094 L407.1094,110.2656 L401.8438,110.2656 L401.8438,112.9375 L406.6094,112.9375 L406.6094,115.0938 L401.8438,115.0938 L401.8438,118.3438 L407.1094,118.3438 L407.1094,120.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="417" y="119.3467">Пользователь</text><line style="stroke:#181818;stroke-width:0.5;" x1="389" x2="523" y1="130.5" y2="130.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="394" y="147.4951">ID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="394" y="163.792">ФИО</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="394" y="180.0889">email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="394" y="196.3857">Дата рождения</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="394" y="212.6826">Пол</text><line style="stroke:#181818;stroke-width:0.5;" x1="389" x2="523" y1="219.9844" y2="219.9844"/></g><!--MD5=[8272429289b81f9007fc84d53d9d6b11]
+class Соревнование--><g id="elem_Соревнование"><rect codeLine="22" fill="#F1F1F1" height="145.7813" id="Соревнование" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="7" y="271"/><ellipse cx="35.95" cy="287" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M40.0594,293 L32.3406,293 L32.3406,280.6094 L40.0594,280.6094 L40.0594,282.7656 L34.7938,282.7656 L34.7938,285.4375 L39.5594,285.4375 L39.5594,287.5938 L34.7938,287.5938 L34.7938,290.8438 L40.0594,290.8438 L40.0594,293 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="53.05" y="291.8467">Соревнование</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="175" y1="303" y2="303"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="13" y="319.9951">ID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="13" y="336.292">Дата</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="13" y="352.5889">Возрастая категория</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="13" y="368.8857">Тип оружия</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="13" y="385.1826">Вид</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="13" y="401.4795">Тип</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="175" y1="408.7813" y2="408.7813"/></g><!--MD5=[5b66e89722f21078b22f6b2bb8d5c9a0]
+class Бой--><g id="elem_Бой"><rect codeLine="31" fill="#F1F1F1" height="145.7813" id="Бой" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="164" x="374" y="271"/><ellipse cx="437.75" cy="287" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M441.8594,293 L434.1406,293 L434.1406,280.6094 L441.8594,280.6094 L441.8594,282.7656 L436.5938,282.7656 L436.5938,285.4375 L441.3594,285.4375 L441.3594,287.5938 L436.5938,287.5938 L436.5938,290.8438 L441.8594,290.8438 L441.8594,293 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="458.25" y="291.8467">Бой</text><line style="stroke:#181818;stroke-width:0.5;" x1="375" x2="537" y1="303" y2="303"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="14" x="380" y="319.9951">ID</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="380" y="336.292">ID соревнования</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="380" y="352.5889">ID победителя</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="380" y="368.8857">ID проигравшего</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="380" y="385.1826">Счет победителя</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="380" y="401.4795">Счет проишравшего</text><line style="stroke:#181818;stroke-width:0.5;" x1="375" x2="537" y1="408.7813" y2="408.7813"/></g><!--MD5=[c071507557f5df6cb0a8ba45e1461e80]
+reverse link Соревнование to Бой--><g id="link_Соревнование_Бой"><path codeLine="40" d="M183.18,344 C241.78,344 317.39,344 373.98,344 " fill="none" id="Соревнование-backto-Бой" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="180.12" x2="180.12" y1="348" y2="340"/><line style="stroke:#181818;stroke-width:1.0;" x1="183.12" x2="183.12" y1="348" y2="340"/><line style="stroke:#181818;stroke-width:1.0;" x1="184.12" x2="176.12" y1="344" y2="344"/></g><!--MD5=[892760e827fea785c071cad8a6ba09b2]
+link Соревнование to Пользователь--><g id="link_Соревнование_Пользователь"><path codeLine="42" d="M183.37,298.63 C244.28,268.22 323.48,228.67 380.63,200.13 " fill="none" id="Соревнование-Пользователь" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="380.6817" x2="385.161" y1="200.102" y2="191.1613"/><line style="stroke:#181818;stroke-width:1.0;" x1="380.6817" x2="390.519" y1="200.102" y2="201.8987"/><line style="stroke:#181818;stroke-width:1.0;" x1="380.6817" x2="387.84" y1="200.102" y2="196.53"/><ellipse cx="375.313" cy="202.781" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="183.2783" x2="178.799" y1="298.678" y2="307.6187"/><line style="stroke:#181818;stroke-width:1.0;" x1="183.2783" x2="173.441" y1="298.678" y2="296.8813"/><line style="stroke:#181818;stroke-width:1.0;" x1="183.2783" x2="176.12" y1="298.678" y2="302.25"/><ellipse cx="188.647" cy="295.999" fill="none" rx="4" ry="4" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="207" y="218.0669">участвует, создает</text></g><!--MD5=[e3a24195b03b6ce5ab37ec4c50ad3698]
+link Спортсмен to Пользователь--><g id="link_Спортсмен_Пользователь"><path codeLine="43" d="M165.86,163 C230.82,163 324.85,163 387.86,163 " fill="none" id="Спортсмен-Пользователь" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="254" y="159.0669">имеет</text></g><!--MD5=[887ca9cd629c166144d70e6b910bbe99]
+link Администратор to Пользователь--><g id="link_Администратор_Пользователь"><path codeLine="44" d="M158.57,55.06 C223.61,78.74 322.44,114.73 387.85,138.55 " fill="none" id="Администратор-Пользователь" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="254" y="70.0669">имеет</text></g><!--MD5=[186373778286122e516d23c829c825fa]
+@startuml er
+
+left to right direction
+
+entity Администратор {}
+entity Спортсмен {
+    ID
+    Вооруженная рука
+    Страховка
+    Лицензия
+    Оружие
+    Разряд
+}
+
+entity Пользователь {
+    ID 
+    ФИО
+    email
+    Дата рождения
+    Пол
+}
+
+entity Соревнование {
+    ID
+    Дата
+    Возрастая категория
+    Тип оружия
+    Вид
+    Тип
+}
+
+entity Бой {
+    ID 
+    ID соревнования
+    ID победителя
+    ID проигравшего
+    Счет победителя
+    Счет проишравшего
+}
+
+Соревнование ||- - Бой
+
+Соревнование }o- -o{ Пользователь : участвует, создает
+Спортсмен - - Пользователь: имеет
+Администратор - - Пользователь: имеет
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 20:01:30 MSK 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ru
+Country: RU
+--></g></svg>

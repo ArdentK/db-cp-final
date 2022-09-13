@@ -11,4 +11,5 @@ func RegisterHTTPEndpoints(router *gin.RouterGroup, usecase competitions.CompUse
 
 	router.GET("/competitions", h.Index)
 	router.GET("/analytics", h.Analytics)
+	router.POST("/competition", h.Get)
 }
