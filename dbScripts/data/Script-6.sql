@@ -41,7 +41,19 @@ create table account (
 	email varchar not null unique 
 );
 
-drop table account;
+create table athlets (
+	idffr bigserial not null primary key,
+	id_account int not null references account(id),
+	hand varchar check(hand = 'left' or hand = 'right'),
+	insurance bool default false,
+	license bool default false,
+	weapon_type varchar not null,
+	rank varchar
+);
+
+drop table athlets ;
+
+select id from competitions c where age_category = 'взрослые' and sex = 'female';
 
 create table AthletComp (
 	id bigserial not null primary key,
